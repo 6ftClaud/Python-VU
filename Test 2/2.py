@@ -1,29 +1,4 @@
-# Sukuriama Item klase
-class Item:
-
-    # Issaukiant klases konstruktoriu priimami trys kintamieji skirti prekei
-    def __init__(self, name, quantity=1, price=10):
-        self.name = name
-        self.quantity = quantity
-        self.price = price
-
-    # metodas get_total_price grazina prekes kaina
-    def get_total_price(self):
-        return (self.quantity * self.price)
-
-    # metodas full_info grazina visa prekes informacija
-    def full_info(self):
-        return self.name + " " + str(self.price) + " " + str(self.quantity) + " " + str((self.quantity * self.price))
-
-    # Sukurus prekes "Dictionary", jis grazinamas
-    def to_dict(self):
-        dict = {
-            "name": self.name,
-            "quantity": self.quantity,
-            "price": self.price,
-            "total_price": self.get_total_price()
-        }
-        return dict
+from shop.item import Item
 
 
 # Testavimas
