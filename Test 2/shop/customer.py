@@ -10,8 +10,13 @@ class Customer:
     # Sukuriamas klases Customer kintamasis "identifier"
     identifier = 0
 
-    # Sukuriant klases objekta issaukiamas konstruktorius, kuris priima "name" kintamaji ir prekiu sarasa, kuris susideda is Item objektu
+    """
+    Sukuriant klases objekta issaukiamas konstruktorius, kuris priima "name" kintamaji
+    ir prekiu sarasa, kuris susideda is Item objektu
+    """
+
     def __init__(self, name, cart=None):
+        # Privatus "__name" kintamasis
         self.__name = name
         # Klases Customer identifikatorius padidinamas vienetu kai sukuriamas naujas objektas
         Customer.identifier += 1
@@ -52,7 +57,7 @@ class Customer:
             self.items.pop(index)
         # Jei preke su duotu indeksu neegzistuoja, apie tai pranesama
         except IndexError:
-            print("Prekės su duotu indeksu nėra.")
+            print("Prekes su duotu indeksu nera.")
 
     # Parodomas visas sarasas
     def get_items(self):

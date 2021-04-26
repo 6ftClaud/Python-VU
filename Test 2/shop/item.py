@@ -45,4 +45,4 @@ class Drink(Item):
 
     # Prie Item klases full_info metodo pridedamas "Gerimas" string
     def full_info(self):
-        return "Gėrimas" + " " + Item.full_info(self)
+        return "Gerimas" + " " + Item.full_info(self)
