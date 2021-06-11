@@ -21,7 +21,7 @@ Base = declarative_base()
 class Channel(Base):
     __tablename__ = "channels"
     id = Column(Integer, primary_key=True)
-    name = Column(String(40), nullable=False)
+    name = Column(String(50), nullable=False)
     created_at = Column(DateTime, default=datetime.datetime.now())
     shows = relationship("Show")
 
@@ -33,7 +33,7 @@ class Show(Base):
     chanel_id = Column(Integer, ForeignKey("channels.id"))
     start_datetime = Column(DateTime, default=datetime.datetime.now(), nullable=False)
     rate = Column(Integer)
-    name = Column(String(40), nullable=False)
+    name = Column(String(50), nullable=False)
     channel = relationship("Channel")
 
 
